@@ -24,3 +24,4 @@ Route::resource('/prodi', ProdiController::class);
 // Route::get('/add', function () {
 //     return view('fakultas.add-fakultas');
 // });
+//

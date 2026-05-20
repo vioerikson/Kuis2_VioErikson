@@ -113,7 +113,7 @@ class ProdiController extends Controller
     public function destroy(prodi $prodi)
     {
         // Menghapus data prodi dari database
-        $prodi->delete();
+        $prodi->delete(0);
 
         return redirect()->route("prodi.index")->with('success', "Berhasil menghapus data prodi");
     }

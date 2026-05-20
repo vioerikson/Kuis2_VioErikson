@@ -1,88 +1,116 @@
 <x-layout>
+
     <div class="container py-5">
 
         <div class="row justify-content-center">
-            <div class="col-md-6">
 
-                <div class="card border-0 shadow-lg rounded-4">
+            <div class="col-lg-6 col-md-8">
 
-                    {{-- Header --}}
-                    <div class="card-header bg-warning text-dark text-center py-4 rounded-top-4">
-                        <h2 class="fw-bold mb-1">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+
+                    {{-- HEADER --}}
+                    <div class="p-5 border-bottom bg-white">
+
+                        <h2 class="fw-bold text-dark mb-2">
                             ✏ Edit Fakultas
                         </h2>
 
-                        <p class="mb-0 small">
+                        <p class="text-muted mb-0">
                             Perbarui informasi data fakultas
                         </p>
+
                     </div>
 
-                    {{-- Body --}}
-                    <div class="card-body p-4">
 
-                    @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul class="mb-0">
+                    {{-- BODY --}}
+                    <div class="card-body p-5 bg-white">
+
+                        {{-- ERROR --}}
+                        @if ($errors->any())
+
+                            <div class="alert alert-danger border-0 rounded-4">
+
+                                <ul class="mb-0 ps-3">
+
                                     @foreach ($errors->all() as $error)
+
                                         <li>{{ $error }}</li>
+
                                     @endforeach
+
                                 </ul>
+
                             </div>
+
                         @endif
 
-                        <form action="/fakultas/{{ $fakultas->id }}" method="POST">
-                            @csrf
-                            @method("PUT")
 
-                            {{-- Nama Fakultas --}}
+                        {{-- FORM --}}
+                        <form action="/fakultas/{{ $fakultas->id }}"
+                              method="POST">
+
+                            @csrf
+                            @method('PUT')
+
+
+                            {{-- NAMA FAKULTAS --}}
                             <div class="mb-4">
 
-                                <label class="form-label fw-semibold">
+                                <label class="form-label fw-semibold text-dark">
+
                                     Nama Fakultas
+
                                 </label>
 
-                                <input 
+                                <input
                                     type="text"
                                     name="nama_fakultas"
-                                    class="form-control form-control-lg rounded-3"
+                                    class="form-control custom-input"
                                     placeholder="Masukkan nama fakultas"
                                     value="{{ $fakultas->nama_fakultas }}"
-                                    required
-                                >
+                                    required>
 
                             </div>
 
-                            {{-- Nama Dekan --}}
-                            <div class="mb-4">
 
-                                <label class="form-label fw-semibold">
+                            {{-- NAMA DEKAN --}}
+                            <div class="mb-5">
+
+                                <label class="form-label fw-semibold text-dark">
+
                                     Nama Dekan
+
                                 </label>
 
-                                <input 
+                                <input
                                     type="text"
                                     name="nama_dekan"
                                     id="nama_dekan"
-                                    class="form-control form-control-lg rounded-3"
+                                    class="form-control custom-input"
                                     placeholder="Masukkan nama dekan"
                                     value="{{ $fakultas->nama_dekan }}"
-                                    required
-                                >
+                                    required>
 
                             </div>
 
-                            {{-- Tombol --}}
-                            <div class="d-flex gap-2">
 
-                                <a href="/fakultas" 
-                                   class="btn btn-secondary rounded-3 px-4">
+                            {{-- BUTTON --}}
+                            <div class="d-flex gap-3">
+
+                                <a href="/fakultas"
+                                   class="btn btn-light border rounded-4 px-4 py-3 fw-semibold flex-fill">
+
                                     ← Kembali
+
                                 </a>
 
-                                <button 
+
+                                <button
                                     type="submit"
-                                    class="btn btn-warning text-white rounded-3 px-4 shadow-sm">
-                                    💾 Update
+                                    class="btn btn-dark rounded-4 px-4 py-3 fw-semibold flex-fill">
+
+                                    💾 Update Data
+
                                 </button>
 
                             </div>
@@ -91,17 +119,67 @@
 
                     </div>
 
-                    {{-- Footer --}}
-                    <div class="card-footer bg-light text-center rounded-bottom-4">
+
+                    {{-- FOOTER --}}
+                    <div class="card-footer bg-white border-top text-center py-4">
+
                         <small class="text-muted">
                             Sistem Informasi Fakultas
                         </small>
+
                     </div>
 
                 </div>
 
             </div>
+
         </div>
 
     </div>
+
+
+    {{-- STYLE --}}
+    <style>
+
+        .custom-input{
+            border-radius:16px;
+            border:1px solid #e5e7eb;
+            padding:14px 18px;
+            font-size:15px;
+            transition:.3s;
+            box-shadow:none!important;
+        }
+
+        .custom-input:focus{
+            border-color:#111827;
+            box-shadow:0 0 0 4px rgba(17,24,39,0.08)!important;
+        }
+
+        .btn-dark{
+            background:#111827;
+            border:none;
+            transition:.3s;
+        }
+
+        .btn-dark:hover{
+            background:#000;
+            transform:translateY(-2px);
+        }
+
+        .btn-light{
+            background:#f9fafb;
+            transition:.3s;
+        }
+
+        .btn-light:hover{
+            background:#f3f4f6;
+            transform:translateY(-2px);
+        }
+
+        .card{
+            background:#fff;
+        }
+
+    </style>
+
 </x-layout>

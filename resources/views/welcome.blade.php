@@ -1,27 +1,29 @@
 <x-layout>
 
-    {{-- HERO SECTION --}}
-    <section class="bg-primary bg-gradient text-white py-5 overflow-hidden">
+    {{-- HERO --}}
+    <section class="bg-light py-5 overflow-hidden">
 
         <div class="container">
 
             <div class="row align-items-center min-vh-75">
 
-                {{-- Text --}}
+                {{-- TEXT --}}
                 <div class="col-lg-6">
 
-                    <span class="badge bg-light text-primary px-3 py-2 rounded-pill mb-3">
+                    <span class="badge bg-dark text-light px-3 py-2 rounded-pill mb-3">
                         🎓 Sistem Informasi Akademik
                     </span>
 
-                    <h1 class="display-3 fw-bold mb-4">
+                    <h1 class="display-3 fw-bold mb-4 text-dark">
+
                         Kelola Data Fakultas
-                        <span class="text-warning">
+                        <span class="text-secondary">
                             Lebih Mudah
                         </span>
+
                     </h1>
 
-                    <p class="lead text-light mb-4">
+                    <p class="lead text-muted mb-4">
                         Platform modern untuk mengelola data fakultas,
                         dekan, dan informasi akademik universitas secara
                         cepat, aman, dan profesional.
@@ -30,12 +32,12 @@
                     <div class="d-flex flex-wrap gap-3">
 
                         <a href="/fakultas"
-                           class="btn btn-light btn-lg rounded-4 px-4 shadow">
+                           class="btn btn-dark btn-lg rounded-4 px-4 shadow-sm">
                             📚 Lihat Fakultas
                         </a>
 
                         <a href="/fakultas/create"
-                           class="btn btn-warning btn-lg rounded-4 px-4 shadow text-white">
+                           class="btn btn-outline-dark btn-lg rounded-4 px-4">
                             ➕ Tambah Fakultas
                         </a>
 
@@ -43,12 +45,12 @@
 
                 </div>
 
-                {{-- Illustration --}}
+                {{-- IMAGE --}}
                 <div class="col-lg-6 text-center mt-5 mt-lg-0">
 
                     <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png"
-                         class="img-fluid"
-                         style="max-height: 420px;"
+                         class="img-fluid opacity-75"
+                         style="max-height: 400px;"
                          alt="University">
 
                 </div>
@@ -61,13 +63,13 @@
 
 
     {{-- FEATURES --}}
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-white">
 
         <div class="container">
 
             <div class="text-center mb-5">
 
-                <h2 class="fw-bold display-6">
+                <h2 class="fw-bold text-dark">
                     Kenapa Menggunakan Sistem Ini?
                 </h2>
 
@@ -79,19 +81,18 @@
 
             <div class="row g-4">
 
-                {{-- Feature 1 --}}
+                {{-- CARD --}}
                 <div class="col-md-4">
 
-                    <div class="card border-0 shadow-lg h-100 rounded-4">
+                    <div class="card border-0 shadow-sm rounded-4 h-100 feature-card">
 
                         <div class="card-body text-center p-5">
 
-                            <div class="bg-primary text-white rounded-circle d-inline-flex justify-content-center align-items-center mb-4"
-                                 style="width:80px;height:80px;font-size:35px;">
+                            <div class="icon-box bg-light text-dark mx-auto mb-4">
                                 ⚡
                             </div>
 
-                            <h4 class="fw-bold">
+                            <h4 class="fw-bold text-dark">
                                 Cepat & Modern
                             </h4>
 
@@ -106,19 +107,18 @@
 
                 </div>
 
-                {{-- Feature 2 --}}
+                {{-- CARD --}}
                 <div class="col-md-4">
 
-                    <div class="card border-0 shadow-lg h-100 rounded-4">
+                    <div class="card border-0 shadow-sm rounded-4 h-100 feature-card">
 
                         <div class="card-body text-center p-5">
 
-                            <div class="bg-success text-white rounded-circle d-inline-flex justify-content-center align-items-center mb-4"
-                                 style="width:80px;height:80px;font-size:35px;">
+                            <div class="icon-box bg-light text-dark mx-auto mb-4">
                                 🔒
                             </div>
 
-                            <h4 class="fw-bold">
+                            <h4 class="fw-bold text-dark">
                                 Aman
                             </h4>
 
@@ -133,19 +133,18 @@
 
                 </div>
 
-                {{-- Feature 3 --}}
+                {{-- CARD --}}
                 <div class="col-md-4">
 
-                    <div class="card border-0 shadow-lg h-100 rounded-4">
+                    <div class="card border-0 shadow-sm rounded-4 h-100 feature-card">
 
                         <div class="card-body text-center p-5">
 
-                            <div class="bg-warning text-white rounded-circle d-inline-flex justify-content-center align-items-center mb-4"
-                                 style="width:80px;height:80px;font-size:35px;">
+                            <div class="icon-box bg-light text-dark mx-auto mb-4">
                                 📊
                             </div>
 
-                            <h4 class="fw-bold">
+                            <h4 class="fw-bold text-dark">
                                 Mudah Digunakan
                             </h4>
 
@@ -168,7 +167,7 @@
 
 
     {{-- STATISTICS --}}
-    <section class="py-5">
+    <section class="py-5 bg-light">
 
         <div class="container">
 
@@ -176,9 +175,9 @@
 
                 <div class="col-md-3">
 
-                    <div class="card border-0 shadow rounded-4 p-4">
+                    <div class="card border-0 shadow-sm rounded-4 p-4">
 
-                        <h1 class="fw-bold text-primary">
+                        <h1 class="fw-bold text-dark">
                             20+
                         </h1>
 
@@ -192,9 +191,9 @@
 
                 <div class="col-md-3">
 
-                    <div class="card border-0 shadow rounded-4 p-4">
+                    <div class="card border-0 shadow-sm rounded-4 p-4">
 
-                        <h1 class="fw-bold text-success">
+                        <h1 class="fw-bold text-dark">
                             100+
                         </h1>
 
@@ -208,9 +207,9 @@
 
                 <div class="col-md-3">
 
-                    <div class="card border-0 shadow rounded-4 p-4">
+                    <div class="card border-0 shadow-sm rounded-4 p-4">
 
-                        <h1 class="fw-bold text-warning">
+                        <h1 class="fw-bold text-dark">
                             5000+
                         </h1>
 
@@ -224,9 +223,9 @@
 
                 <div class="col-md-3">
 
-                    <div class="card border-0 shadow rounded-4 p-4">
+                    <div class="card border-0 shadow-sm rounded-4 p-4">
 
-                        <h1 class="fw-bold text-danger">
+                        <h1 class="fw-bold text-dark">
                             24/7
                         </h1>
 
@@ -250,16 +249,16 @@
 
         <div class="container text-center">
 
-            <h2 class="fw-bold display-6 mb-4">
+            <h2 class="fw-bold mb-4">
                 Mulai Kelola Data Fakultas Sekarang
             </h2>
 
-            <p class="lead text-light mb-4">
+            <p class="lead text-secondary mb-4">
                 Tingkatkan efisiensi administrasi akademik universitas Anda
             </p>
 
             <a href="/fakultas/create"
-               class="btn btn-warning btn-lg rounded-4 px-5 shadow">
+               class="btn btn-light btn-lg rounded-4 px-5">
                 🚀 Mulai Sekarang
             </a>
 
@@ -269,7 +268,7 @@
 
 
     {{-- FOOTER --}}
-    <footer class="bg-black text-light py-4">
+    <footer class="bg-white border-top py-4">
 
         <div class="container">
 
@@ -277,11 +276,11 @@
 
                 <div class="col-md-6">
 
-                    <h5 class="fw-bold mb-1">
+                    <h5 class="fw-bold text-dark mb-1">
                         🎓 Sistem Informasi Fakultas
                     </h5>
 
-                    <small class="text-secondary">
+                    <small class="text-muted">
                         Laravel Academic Management System
                     </small>
 
@@ -289,7 +288,7 @@
 
                 <div class="col-md-6 text-md-end mt-3 mt-md-0">
 
-                    <small class="text-secondary">
+                    <small class="text-muted">
                         © {{ date('Y') }} All Rights Reserved
                     </small>
 
@@ -300,5 +299,33 @@
         </div>
 
     </footer>
+
+
+    {{-- STYLE --}}
+    <style>
+
+        .min-vh-75{
+            min-height: 75vh;
+        }
+
+        .feature-card{
+            transition: .3s;
+        }
+
+        .feature-card:hover{
+            transform: translateY(-5px);
+        }
+
+        .icon-box{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+        }
+
+    </style>
 
 </x-layout>

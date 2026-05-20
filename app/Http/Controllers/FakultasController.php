@@ -33,8 +33,8 @@ class FakultasController extends Controller
     public function store(Request $request)
     {
        $request->validate([
-            'nama_fakultas' => ['required', 'max:5'],
-            'nama_dekan' => ['required', 'max:5']
+            'nama_fakultas' => ['required', 'max:100'],
+            'nama_dekan' => ['required', 'max:100']
         ],
         [
             'nama_fakultas.required' => 'Nama Fakultas wajib diisi',
@@ -76,8 +76,8 @@ class FakultasController extends Controller
     public function update(Request $request, Fakultas $fakulta)
     {
         $request->validate([
-            'nama_fakultas' => ['required', 'max:5'],
-            'nama_dekan' => ['required', 'max:5']
+            'nama_fakultas' => ['required', 'max:100'],
+            'nama_dekan' => ['required', 'max:100']
         ]);
         $fakulta->update([
             'nama_fakultas' => $request->nama_fakultas,

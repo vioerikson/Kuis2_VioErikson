@@ -120,11 +120,20 @@
                             Fakultas
                         </a>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route("prodi.index") }}">
+                            Prodi
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route("prodi.create") }}">
+                            + tambah Prodi
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a href="/fakultas/create"
                            class="btn btn-warning text-white px-4">
-                            + Tambah
+                            + Tambah fakultas
                         </a>
                     </li>
 

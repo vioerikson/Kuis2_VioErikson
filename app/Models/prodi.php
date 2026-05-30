@@ -6,8 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class prodi extends Model
 {
-    //
+
     protected $fillable = [
-        "nama_prodi", "nama_kaprodi", "alias_prodi"
+        "fakultas_id",
+        "nama_prodi", 
+        "nama_kaprodi", 
+        "alias_prodi",
+        "photo_kaprodi"
     ];
 }

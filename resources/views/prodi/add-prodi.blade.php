@@ -46,8 +46,8 @@
 
 
                         {{-- FORM --}}
-                        <form action="{{ route('prodi.store') }}"
-                              method="POST">
+                        <form action="/prodi"
+                              method="POST" enctype="multipart/form-data">
 
                             @csrf
 
@@ -81,7 +81,21 @@
                                     placeholder="Contoh: Dr. Budi Santoso">
 
                             </div>
+                            
+                            <div class="mb-3">
 
+                                <label for="photo_kaprodi" class="form-label fw-semibold text-dark">
+                                    Foto Kaprodi
+                                </label>
+                                <input 
+                                    type="file"
+                                    id="photo_kaprodi" 
+                                    name="photo_kaprodi" 
+                                    class="form-control custom-input" 
+                                    accept="image/*"
+                                    placeholder="Pilih foto kaprodi"
+                                >    
+                            </div>  
 
                             {{-- ALIAS --}}
                             <div class="mb-5">
